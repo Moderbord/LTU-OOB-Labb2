@@ -14,7 +14,9 @@ public:
 	Car();
 	Engine GetEngine();
 	void SetEngine(Engine engine);
-	Tire* GetTires();
+	Tire GetTire(int i);
+	Tire GetTires();
+	void SetTire(Tire tire, int i);
 	void SetTires(Tire tire);
 	string GetBrand();
 	void SetBrand(string brand);
@@ -23,7 +25,7 @@ public:
 
 private:
 	Engine engine;
-	Tire *tires[4];
+	Tire tires[4];
 	string brand;
 	Person owner;
 };
