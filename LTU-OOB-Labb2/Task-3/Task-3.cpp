@@ -12,13 +12,13 @@ void swapNums(int **a, int **b);
 int main()
 {
 	int x = 5;
-	int y = 7;
+	int y = 6;
 
 	int *ptr1 = &x;			// The adress of 'x'
 	int *ptr2 = &y;
 
 	swapNums(&ptr1, &ptr2);	// Sends adress of adress
-
+	cout << *ptr1 << " " << *ptr2;
 }
 
 void swapNums(int **a, int **b)	// Takes adress of adress
