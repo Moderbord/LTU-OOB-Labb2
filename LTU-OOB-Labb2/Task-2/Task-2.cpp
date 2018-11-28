@@ -18,7 +18,7 @@ int main()
 
 }
 
-void swapNums(int *a, int *b)	// Takes deferenced adress
+void swapNums(int *a, int *b)	// Takes adress
 {
 	int z = *a;		// 'z' = deRef of 'a' (5)
 
