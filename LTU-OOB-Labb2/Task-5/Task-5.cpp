@@ -1,21 +1,55 @@
-// Task-5.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include "pch.h"
+#include "Dictionary.h"
 #include <iostream>
 
 int main()
 {
-    std::cout << "Hello World!\n"; 
+	Dictionary dict;
+
+	dict.insert("Drake", "Snygg");
+	dict.insert("Alliza", "Best EU player");
+	dict.insert("Skog", "Barrigt");
+	dict.insert("Sparkles", "Shiny and effective");
+
+	while (true)
+	{
+		cout << "===================" << endl;
+		cout << "Dictionary - Map" << endl;
+		cout << "1. Insert" << endl;
+		cout << "2. Lookup" << endl;
+		cout << "3. Exit" << endl;
+		cout << "\n>> ";
+
+		string input, word, desc;
+		cin >> input;
+
+		switch (input[0])
+		{
+		case '1':
+			cout << "Word to enter: ";
+			cin >> word;
+
+			cout << "Description of word: ";
+			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');		// safer way to ignore '\n' in the buffer
+			getline(cin, desc);
+
+			dict.insert(word, desc);
+			break;
+
+		case '2':
+			cout << "Word to lookup: ";
+			cin >> word;
+
+			dict.lookup(word);
+			break;
+
+		case '3':
+			cout << "Closing..";
+			return false;
+
+		default:
+			break;
+
+		}
+	}
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
