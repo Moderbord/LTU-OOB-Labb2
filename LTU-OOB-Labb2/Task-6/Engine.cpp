@@ -1,5 +1,11 @@
 #include "pch.h"
 #include "Engine.h"
+#include <iostream>
+
+namespace {
+	using std::cout;
+	using std::endl;
+}
 
 Engine::Engine()
 {
@@ -34,4 +40,11 @@ int Engine::GetNumber_of_cylinders()
 void Engine::SetNumber_of_cylinders(int number_of_cylinders)
 {
 	this->number_of_cylinders = number_of_cylinders;
+}
+
+void Engine::Print()
+{
+	cout << "Engine model name: " << modelname << endl;
+	cout << "Engine horsepower: " << horsepower << endl;
+	cout << "Cylinders in engine: " << number_of_cylinders << endl;
 }

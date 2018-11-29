@@ -15,6 +15,7 @@ public:
 	void SetHorsepower(float horsepower);
 	int GetNumber_of_cylinders();
 	void SetNumber_of_cylinders(int number_of_cylinders);
+	void Print();
 
 private:
 	string modelname;

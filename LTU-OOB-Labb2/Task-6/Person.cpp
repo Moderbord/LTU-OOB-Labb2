@@ -1,5 +1,11 @@
 #include "pch.h"
 #include "Person.h"
+#include <iostream>
+
+namespace {
+	using std::cout;
+	using std::endl;
+}
 
 Person::Person()
 {
@@ -34,5 +40,12 @@ string Person::GetContact_number()
 void Person::SetContact_number(string number)
 {
 	contact_number = number;
+}
+
+void Person::Print()
+{
+	cout << "Name of owner: " << name << endl;
+	cout << "Owners address: " << address << endl;
+	cout << "Owners contact number: " << contact_number << endl;
 }
 

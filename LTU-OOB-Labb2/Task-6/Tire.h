@@ -15,6 +15,7 @@ public:
 	void SetWidth(float width);
 	int GetRim_diameter();
 	void SetRim_diameter(int rim_diameter);
+	void Print();
 
 private:
 	string brand_name;

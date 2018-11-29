@@ -15,6 +15,7 @@ public:
 	void SetAddress(string address);
 	string GetContact_number();
 	void SetContact_number(string number);
+	void Print();
 
 private:
 	string name;

@@ -22,6 +22,7 @@ public:
 	void SetBrand(string brand);
 	Person GetOwner();
 	void SetOwner(Person owner);
+	void Print();
 
 private:
 	Engine engine;
