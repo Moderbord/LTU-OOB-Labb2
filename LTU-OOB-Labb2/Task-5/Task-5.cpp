@@ -45,6 +45,7 @@ int main()
 
 		case '3':
 			cout << "Closing..";
+			dict.save();
 			return false;
 
 		default:

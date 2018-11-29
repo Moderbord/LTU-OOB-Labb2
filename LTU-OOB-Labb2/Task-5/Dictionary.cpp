@@ -23,3 +23,21 @@ void Dictionary::lookup(string key)
 	}
 	cout << "Word was not found" << endl;
 }
+
+void Dictionary::load()
+{
+
+}
+
+void Dictionary::save()
+{
+	ofstream file;
+	file.open("dragons.txt", std::ios::out);		// Open for output oprations (rewrites the file)
+
+	for (map<string, string>::iterator it = dictionary.begin(); it != dictionary.end(); it++)		// Iterates through the dictionary
+	{
+		file << it->first << "," << it->second << endl;
+	}
+
+	file.close();
+}
