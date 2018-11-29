@@ -21,10 +21,10 @@ namespace {
 class Dictionary
 {
 public:
-	void insert(string key, string desc);
-	void lookup(string key);
-	void load();
-	void save();
+	void addWord(string key, string desc);
+	void lookupWord(string key);
+	void loadDictionary();
+	void saveDictionary();
 private:
 	map <string, string> dictionary;
 };

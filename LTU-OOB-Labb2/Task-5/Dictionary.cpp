@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "Dictionary.h"
 
-void Dictionary::insert(string key, string desc)
+void Dictionary::addWord(string key, string desc)
 {
 	pair<map<string, string>::iterator, bool> hit;
 
@@ -12,7 +12,7 @@ void Dictionary::insert(string key, string desc)
 	}
 }
 
-void Dictionary::lookup(string key)
+void Dictionary::lookupWord(string key)
 {
 	map<string, string>::iterator hit = dictionary.find(key);
 
@@ -24,12 +24,25 @@ void Dictionary::lookup(string key)
 	cout << "Word was not found" << endl;
 }
 
-void Dictionary::load()
+void Dictionary::loadDictionary()
 {
+	string line, key, value;
+	ifstream file("dragons.txt");
 
+	while (getline(file, line))
+	{
+		std::size_t separator = line.find(',');		// index if the ',' character
+
+		key = line.substr(0, separator);			// Key evaluates from start of line up to separator
+		value = line.substr(separator + 1);			// Value evaluates from after separator to end
+
+		this->addWord(key, value);					// Adds key/value-pair to dictionary
+	}
+
+	file.close();
 }
 
-void Dictionary::save()
+void Dictionary::saveDictionary()
 {
 	ofstream file;
 	file.open("dragons.txt", std::ios::out);		// Open for output oprations (rewrites the file)

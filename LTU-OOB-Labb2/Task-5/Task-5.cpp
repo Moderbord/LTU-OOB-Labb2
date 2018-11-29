@@ -5,11 +5,7 @@
 int main()
 {
 	Dictionary dict;
-
-	dict.insert("Drake", "Snygg");
-	dict.insert("Alliza", "Best EU player");
-	dict.insert("Skog", "Barrigt");
-	dict.insert("Sparkles", "Shiny and effective");
+	dict.loadDictionary();
 
 	while (true)
 	{
@@ -33,19 +29,19 @@ int main()
 			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');		// safer way to ignore '\n' in the buffer
 			getline(cin, desc);
 
-			dict.insert(word, desc);
+			dict.addWord(word, desc);
 			break;
 
 		case '2':
 			cout << "Word to lookup: ";
 			cin >> word;
 
-			dict.lookup(word);
+			dict.lookupWord(word);
 			break;
 
 		case '3':
 			cout << "Closing..";
-			dict.save();
+			dict.saveDictionary();
 			return false;
 
 		default:
