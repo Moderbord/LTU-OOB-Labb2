@@ -3,9 +3,9 @@
 
 void Dictionary::addWord(string key, string desc)
 {
-	pair<map<string, string>::iterator, bool> hit;
+	pair<map<string, string>::iterator, bool> hit;					// Pair with iterator and bool
 
-	hit = dictionary.insert(pair<string, string>(key, desc));
+	hit = dictionary.insert(pair<string, string>(key, desc));		// Tries to insert key/value-pair in map, return false if word exists
 	if (hit.second == false)
 	{
 		cout << "Word already exist\n";
@@ -14,11 +14,11 @@ void Dictionary::addWord(string key, string desc)
 
 void Dictionary::lookupWord(string key)
 {
-	map<string, string>::iterator hit = dictionary.find(key);
+	map<string, string>::iterator hit = dictionary.find(key);		// Use built-in function .find() to check if word exists. Return false otherwise
 
 	if (hit != dictionary.end())
 	{
-		cout << dictionary[key] << endl;
+		cout << dictionary[key] << endl;							// Word was found, returns value
 		return;
 	}
 	cout << "Word was not found" << endl;

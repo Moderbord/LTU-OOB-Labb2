@@ -13,10 +13,10 @@ int main()
 	int numEmpl;
 
 	cout << "How many employees?\n>>";
-	cin >> numEmpl;
+	cin >> numEmpl;							// Nmr of salaries
 
-	int *arr = new int[numEmpl];
-	for (int i = 0; i < numEmpl; i++)
+	int *arr = new int[numEmpl];			// Array with salaries
+	for (int i = 0; i < numEmpl; i++)		// Store salary for each employee
 	{
 		cout << "Enter salary for employee #" << i + 1 << "\n>>";
 		cin >> arr[i];
@@ -29,7 +29,7 @@ int main()
 	delete[] arr;
 }
 
-int average_salary(int *arr, int n)
+int average_salary(int *arr, int n)			// Calculates average salary
 {
 	int totalSalary = 0;
 

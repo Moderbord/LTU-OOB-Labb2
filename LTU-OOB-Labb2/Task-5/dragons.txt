@@ -1,4 +1,6 @@
 Alliza,Best EU player
+CPU,Central Processing Unit
 Drake,Snygg
+RAM,Random Access Memory
 Skog,Barrigt
 Sparkles,Shiny and effective

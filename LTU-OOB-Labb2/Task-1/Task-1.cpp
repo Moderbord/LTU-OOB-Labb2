@@ -21,7 +21,7 @@ int length(char s[])
 	char *ptr = s; 		// Point to first element
 	int count = 0;
 
-	while (*ptr != '\0')
+	while (*ptr != '\0')	// Counts chars in array
 	{
 		count++;
 		ptr++;
