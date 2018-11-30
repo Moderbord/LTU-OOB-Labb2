@@ -7,8 +7,12 @@ namespace {
 	using std::endl;
 }
 
-Car::Car()
+Car::Car(Engine engine, Tire tire, string brand, Person owner)
 {
+	this->engine = engine;
+	this->SetTires(tire);
+	this->brand = brand;
+	this->owner = owner;
 }
 
 Engine Car::GetEngine()

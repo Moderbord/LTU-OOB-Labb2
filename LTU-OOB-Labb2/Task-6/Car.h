@@ -11,7 +11,7 @@ namespace {
 class Car
 {
 public:
-	Car();
+	Car(Engine engine, Tire tire, string brand, Person owner);
 	Engine GetEngine();
 	void SetEngine(Engine engine);
 	Tire GetTire(int i);

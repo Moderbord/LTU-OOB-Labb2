@@ -9,6 +9,7 @@ class Tire
 {
 public:
 	Tire();
+	Tire(string brand_Name, float width, int rim_diameter);
 	string GetBrand_name();
 	void SetBrand_name(string brand_name);
 	float GetWidth();

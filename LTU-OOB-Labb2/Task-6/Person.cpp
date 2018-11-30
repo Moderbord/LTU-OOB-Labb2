@@ -9,7 +9,14 @@ namespace {
 
 Person::Person()
 {
+	// Default constructor
+}
 
+Person::Person(string name, string address, string contact_number)
+{
+	this->name = name;
+	this->address = address;
+	this->contact_number = contact_number;
 }
 
 string Person::GetName()

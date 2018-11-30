@@ -9,6 +9,7 @@ class Engine
 {
 public:
 	Engine();
+	Engine(string modelname, float horsepower, int num_of_cylinders);
 	string GetModelname();
 	void SetModelname(string modelname);
 	float GetHorsepower();

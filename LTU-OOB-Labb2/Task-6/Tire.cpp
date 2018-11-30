@@ -9,7 +9,14 @@ namespace {
 
 Tire::Tire()
 {
+	// Default constructor
+}
 
+Tire::Tire(string brand_Name, float width, int rim_diameter)
+{
+	this->brand_name = brand_Name;
+	this->width = width;
+	this->rim_diameter = rim_diameter;
 }
 
 string Tire::GetBrand_name()

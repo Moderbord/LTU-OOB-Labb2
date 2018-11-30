@@ -9,6 +9,7 @@ class Person
 {
 public:
 	Person();
+	Person(string name, string address, string contact_number);
 	string GetName();
 	void SetName(string name);
 	string GetAddress();

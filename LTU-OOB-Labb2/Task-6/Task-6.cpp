@@ -14,11 +14,6 @@ namespace {
 
 int main()
 {
-	Car car;
-	Engine engine;
-	Tire tire;
-	Person person;
-
 	string carBrand, engineModelName, tireBrandName, ownerName, ownerAddress, ownerContactNmr;
 	float horsepower, tireWidth;
 	int cylinders, tireRimDiameter;
@@ -55,22 +50,10 @@ int main()
 
 	cout << "\nGreat!! To summarize, here is your car:\n\n";
 
-	person.SetName(ownerName);
-	person.SetAddress(ownerAddress);
-	person.SetContact_number(ownerContactNmr);
-
-	engine.SetModelname(engineModelName);
-	engine.SetHorsepower(horsepower);
-	engine.SetNumber_of_cylinders(cylinders);
-
-	tire.SetBrand_name(tireBrandName);
-	tire.SetWidth(tireWidth);
-	tire.SetRim_diameter(tireRimDiameter);
-
-	car.SetBrand(carBrand);
-	car.SetEngine(engine);
-	car.SetOwner(person);
-	car.SetTires(tire);
+	Engine engine(engineModelName, horsepower, cylinders);
+	Tire tire(tireBrandName, tireWidth, tireRimDiameter);
+	Person owner(ownerName, ownerAddress, ownerContactNmr);
+	Car car(engine, tire, carBrand, owner);
 
 	car.Print();
 

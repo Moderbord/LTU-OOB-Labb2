@@ -9,7 +9,14 @@ namespace {
 
 Engine::Engine()
 {
+	// Default constructor
+}
 
+Engine::Engine(string modelname, float horsepower, int num_of_cylinders)
+{
+	this->modelname = modelname;
+	this->horsepower = horsepower;
+	this->number_of_cylinders = num_of_cylinders;
 }
 
 string Engine::GetModelname()
